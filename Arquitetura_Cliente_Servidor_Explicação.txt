@@ -1,0 +1,41 @@
+Arquitetura Cliente-Servidor - Explicação e Funcionamento
+
+Representação Simplificada:
+
+       +-------------+          +-------------+
+       |             |          |             |
+       |   Cliente   |  <---->  |   Servidor  |
+       |             |          |             |
+       +-------------+          +-------------+
+               Requisição (ex: "Buscar dados do usuário X")
+               Resposta (ex: "Dados do usuário X: {nome: João, idade: 30}")
+
+Funcionamento:
+1. Cliente: 
+   - Inicia a comunicação enviando requisições (ex: navegador web, app mobile).
+   - Exemplos de ações: buscar dados, enviar formulários, solicitar arquivos.
+
+2. Servidor:
+   - Recebe e processa as requisições.
+   - Acessa recursos como bancos de dados ou sistemas internos.
+   - Retorna respostas (dados, confirmações, erros).
+
+3. Comunicação:
+   - Protocolos comuns: HTTP/HTTPS (web), SQL (bancos de dados), FTP (arquivos).
+   - Padrões: REST, SOAP (APIs), sockets (comunicação em tempo real).
+
+Características Principais:
+- Centralização: Controle de dados e regras de negócio no servidor.
+- Escalabilidade: Suporte a múltiplos clientes simultâneos.
+- Segurança: Permissões e autenticação gerenciadas pelo servidor.
+- Manutenção: Atualizações centralizadas no servidor.
+
+Exemplos Práticos:
+- Acesso a sites: Cliente (navegador) <-> Servidor (aplicação web).
+- Bancos de dados: Cliente (aplicativo) <-> Servidor (SGBD como MySQL).
+- Streaming: Cliente (app Netflix) <-> Servidor (plataforma de vídeos).
+
+Vantagens:
+- Organização clara de responsabilidades.
+- Facilidade de gerenciamento de dados.
+- Redução de carga computacional nos clientes.
