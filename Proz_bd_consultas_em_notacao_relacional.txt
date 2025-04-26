@@ -1,0 +1,26 @@
+
+Consultas em Notacao Relacional
+
+1. Mostrar apenas os alunos aprovados (nota > 7,0):
+σ_{NOTA > 7,0}(ALUNO)
+
+2. Mostrar os alunos do primeiro ano com nota maior ou igual a 8,0:
+σ_{SERIE = '1º ano' ∧ NOTA ≥ 8,0}(ALUNO)
+
+3. Mostrar apenas os nomes e as notas dos alunos:
+π_{P.NOME, NOTA}(ALUNO)
+
+4. Criar a tabela PROFESSOR (P.NOME, U.NOME):
+PROFESSOR(P.NOME, U.NOME)
+
+5. Criar a tabela ALUNO apenas com o primeiro e último nome:
+π_{P.NOME, U.NOME}(ALUNO)
+
+6. Mostrar a união entre ALUNO (P.NOME, U.NOME) e PROFESSOR:
+π_{P.NOME, U.NOME}(ALUNO) ∪ PROFESSOR
+
+7. Mostrar a interseção entre ALUNO (P.NOME, U.NOME) e PROFESSOR:
+π_{P.NOME, U.NOME}(ALUNO) ∩ PROFESSOR
+
+8. Mostrar a diferença entre ALUNO (P.NOME, U.NOME) e PROFESSOR:
+π_{P.NOME, U.NOME}(ALUNO) - PROFESSOR
