@@ -1,26 +1,97 @@
 
-Consultas em Notacao Relacional
+Consultas em Notação Relacional com Resultados
 
+----------------------------------------------------
 1. Mostrar apenas os alunos aprovados (nota > 7,0):
+
+Notação Relacional:
 σ_{NOTA > 7,0}(ALUNO)
 
+Resultado:
+Luiz Silva 6215 1º ano Português 8,0
+André Carvalho 4521 3º ano Matemática 9,5
+Alan Vilela 3285 1º ano História 8,0
+Figueiredo Santos 4598 2º ano Geografia 9,0
+
+----------------------------------------------------
 2. Mostrar os alunos do primeiro ano com nota maior ou igual a 8,0:
+
+Notação Relacional:
 σ_{SERIE = '1º ano' ∧ NOTA ≥ 8,0}(ALUNO)
 
+Resultado:
+Luiz Silva 6215 1º ano Português 8,0
+Alan Vilela 3285 1º ano História 8,0
+
+----------------------------------------------------
 3. Mostrar apenas os nomes e as notas dos alunos:
+
+Notação Relacional:
 π_{P.NOME, NOTA}(ALUNO)
 
+Resultado:
+Vitória 7,0
+Luiz 8,0
+André 9,5
+Alan 8,0
+Figueiredo 9,0
+
+----------------------------------------------------
 4. Criar a tabela PROFESSOR (P.NOME, U.NOME):
+
+Notação Relacional:
 PROFESSOR(P.NOME, U.NOME)
 
+Exemplo de dados:
+Carlos Pereira
+Maria Souza
+
+----------------------------------------------------
 5. Criar a tabela ALUNO apenas com o primeiro e último nome:
+
+Notação Relacional:
 π_{P.NOME, U.NOME}(ALUNO)
 
+Resultado:
+Vitória Claudino
+Luiz Silva
+André Carvalho
+Alan Vilela
+Figueiredo Santos
+
+----------------------------------------------------
 6. Mostrar a união entre ALUNO (P.NOME, U.NOME) e PROFESSOR:
+
+Notação Relacional:
 π_{P.NOME, U.NOME}(ALUNO) ∪ PROFESSOR
 
+Resultado:
+Vitória Claudino
+Luiz Silva
+André Carvalho
+Alan Vilela
+Figueiredo Santos
+Carlos Pereira
+Maria Souza
+
+----------------------------------------------------
 7. Mostrar a interseção entre ALUNO (P.NOME, U.NOME) e PROFESSOR:
+
+Notação Relacional:
 π_{P.NOME, U.NOME}(ALUNO) ∩ PROFESSOR
 
+Resultado:
+(Nenhum nome em comum)
+
+----------------------------------------------------
 8. Mostrar a diferença entre ALUNO (P.NOME, U.NOME) e PROFESSOR:
+
+Notação Relacional:
 π_{P.NOME, U.NOME}(ALUNO) - PROFESSOR
+
+Resultado:
+Vitória Claudino
+Luiz Silva
+André Carvalho
+Alan Vilela
+Figueiredo Santos
